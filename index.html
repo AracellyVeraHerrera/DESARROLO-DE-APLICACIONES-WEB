@@ -1,111 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Página HTML5</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lista de Productos</title>
 </head>
 <body>
+  <h1>Lista de Productos</h1>
 
-  <header>
-    <h1>Bienvenido a Mi Página Web</h1>
-    <nav>
-      <ul>
-        <li><a href="#contenido">Contenido</a></li>
-        <li><a href="#galeria">Galería</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+  <ul id="lista-productos">
+    <!-- Productos renderizados dinámicamente -->
+  </ul>
 
-  <main>
-    <section id="contenido">
-      <h2>Introducción</h2>
-      <p><strong> EL FÚTBOL</strong> es un deporte <em> interesante <em> y que ayuda a mantenerse saludable .<p>
-    </section>
+  <button id="agregar-producto">Agregar Producto</button>
 
-    <section>
-      <h2>Multimedia<h2>
-      <article>
-        <h3>Práctica de Deporte<h3>
-        <img src="c:\Users\ADM\Downloads\Imagen de WhatsApp 2025-06-15 a las 16.13.39_93df7502.jpg" alt="Descripción de la imagen" width="300">
-      </article>
-
-      <article>
-        <h3>Video explicativo</h3>
-        <video controls width="300">
-          <source src="c:\Users\ADM\Downloads\Video de WhatsApp 2025-06-15 a las 16.13.59_73fc703c.mp4" type="video/mp4">
-          Tu navegador no soporta el video.
-        </video>
-      </article>
-    </section>
-
-    <section>
-      <h2>Listas</h2>
-      <h3>Lista ordenada</h3>
-      <ol>
-        <li>Primero</li>
-        <li>Segundo</li>
-        <li>Tercero</li>
-      </ol>
-
-      <h3>Lista desordenada</h3>
-      <ul>
-        <li>Tercero</li>
-        <li>Segundo</li>
-        <li>Primero</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Tabla</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Nombre</th>
-            <th>Edad</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Mattias</td>
-            <td>15</td>
-          </tr>
-          <tr>
-            <td>Juan</td>
-            <td>14</td>
-          </tr>
-          <tr>
-            <td>Abdel</td>
-            <td>16</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section id="contacto">
-      <h2>Formulario de contacto</h2>
-      <form>
-        <label for="nombre">Nombre:</label><br>
-        <input type="text" id="nombre" name="nombre"><br><br>
-
-        <label for="correo">Correo:</label><br>
-        <input type="email" id="correo" name="correo"><br><br>
-
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
-
-    <section>
-      <h2>Mas información</h2>
-      <a href="https://www.instagram.com/p/DKiQRfJspax/?igsh=MWh2b3RyaWJrNTNvZw==" target="_blank">Visita</a>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 - Aracelly Vera </p>
-  </footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
