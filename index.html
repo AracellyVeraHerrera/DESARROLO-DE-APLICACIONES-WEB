@@ -2,18 +2,99 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lista de Productos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página Interactiva</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Lista de Productos</h1>
 
-  <ul id="lista-productos">
-    <!-- Productos renderizados dinámicamente -->
-  </ul>
+  <!-- Encabezado -->
+  <header class="bg-primary text-white p-3">
+    <div class="container">
+      <h1 class="mb-0">Ropa-beauty</h1>
+      <nav class="nav">
+        <a class="nav-link text-white" href="#">Inicio</a>
+        <a class="nav-link text-white" href="#">Productos</a>
+        <a class="nav-link text-white" href="#">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
-  <button id="agregar-producto">Agregar Producto</button>
+  <!-- Carrusel -->
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="c:\Users\ADM\Downloads\bab51b9e-f185-4e55-bb94-8acf57664975.77469c8e922fc96d7dcf88526b1b85a4.jpeg" class="d-block w-100" alt="Imagen 1" />
+      </div>
+      <div class="carousel-item">
+        <img src="c:\Users\ADM\Downloads\e4400b9c7b5487095015ce4ed08d0c98.webp" class="d-block w-100" alt="Imagen 2" />
+      </div>
+      <div class="carousel-item">
+        <img src="c:\Users\ADM\Downloads\6f9e3702-dfe1-4e5f-8d85-c413254a0e03.5199a3788dbe9d2f1006dfb052a69152.webp" class="d-block w-100" alt="Imagen 3" />
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
 
+  <!-- Tabla de Productos -->
+  <div class="container my-5">
+    <h2>Productos</h2>
+    <table class="table table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Producto</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Vestido rojo</td><td>$10.00</td></tr>
+        <tr><td>2</td><td>Vestido gris</td><td>$15.50</td></tr>
+        <tr><td>3</td><td>Conjunto blanco</td><td>$8.99</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Formulario de Contacto -->
+  <div class="container mb-5">
+    <h2>Contacto</h2>
+    <form id="contactForm" novalidate>
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre *</label>
+        <input type="text" class="form-control" id="nombre" required />
+        <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+      </div>
+      <div class="mb-3">
+        <label for="correo" class="form-label">Correo Electrónico *</label>
+        <input type="email" class="form-control" id="correo" required />
+        <div class="invalid-feedback">Por favor, ingresa un correo válido.</div>
+      </div>
+      <div class="mb-3">
+        <label for="mensaje" class="form-label">Mensaje *</label>
+        <textarea class="form-control" id="mensaje" rows="3" required></textarea>
+        <div class="invalid-feedback">Por favor, ingresa tu mensaje.</div>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+
+  <!-- Botón de Alerta -->
+  <div class="container text-center my-5">
+    <button class="btn btn-warning" onclick="mostrarAlerta()">Haz clic para ver una alerta</button>
+  </div>
+
+  <!-- Pie de página -->
+  <footer class="bg-dark text-white text-center p-3">
+    <p>Contacto: ga.verah@uea.edu.ec | Redes sociales: @Ropabeauty</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
