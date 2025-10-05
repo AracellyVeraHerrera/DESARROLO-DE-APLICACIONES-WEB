@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Posts{% endblock %}
+{% block content %}
+<h2>Publicaciones</h2>
+
+<form method="POST" action="{{ url_for('add_post') }}" class="row g-3 mb-4">
+    <div class="col-md-4">
+        <input type="text" name="title" class="form-control" placeholder="Título" required>
+    </div>
+    <div class="col-md-6">
+        <input type="text" name="content" class="form-control" placeholder="Contenido" required>
+    </div>
+    <div class="col-md-2">
+        <button type="submit" class="btn btn-success">Agregar</button>
+    </div>
+</form>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Título</th>
+            <th>Contenido</th>
+            <th>Autor</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for post in posts %}
+        <tr>
+            <td>{{ post.id }}</td>
+            <td>{{ post.title }}</td>
+            <td>{{ post.content }}</td>
+            <td>{{ post.username }}</td>
+            <td>
+                <a href="{{ url_for('delete_post', id=post.id) }}" class="btn btn-danger btn-sm">Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
